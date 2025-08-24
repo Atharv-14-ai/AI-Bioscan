@@ -1,0 +1,28 @@
+# Central configuration for AI BioScan (Mel-Spectrogram version)
+seed: 42
+sample_rate: 16000
+duration_sec: 4.0
+mono: true
+
+# Feature extraction
+feature_type: mel   # 'mel' or 'mfcc'
+n_mfcc: 40
+n_mels: 128
+n_fft: 1024
+hop_length: 256
+win_length: 1024
+
+# Training
+batch_size: 16
+epochs: 50
+learning_rate: 0.001
+val_split: 0.2
+early_stopping_patience: 10
+model_dir: models
+model_name: cnn_melspec.keras
+
+# Classes (order matters end-to-end)
+classes:
+  - Pneumonia
+  - Healthy
+  - Asthma
