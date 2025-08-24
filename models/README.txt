@@ -1,0 +1,1 @@
+Trained models will be saved here as cnn_mfcc.h5 and label_map.json
